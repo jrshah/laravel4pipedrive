@@ -1,0 +1,20 @@
+{
+    "name": "jrshah/laravel4pipedrive",
+    "description": "",
+    "authors": [
+        {
+            "name": "jrshah",
+            "email": "shahjay25@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "~4"
+    },
+    "autoload": {
+        "psr-0": {
+            "Jrshah\\Laravel4pipedrive\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
