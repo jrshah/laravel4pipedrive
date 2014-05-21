@@ -8,7 +8,7 @@ Its client api to access data from pipedrive
 Include laravel4pipedrive as a dependency in composer.json:
 
 ~~~
-"jrshah/laravel4pipedrive": "dev-master"
+"jrshah/laravel4pipedrive": "0.*"
 ~~~
 
 Run `composer install` to download the dependency.
