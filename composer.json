@@ -1,6 +1,7 @@
 {
     "name": "jrshah/laravel4pipedrive",
     "description": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "jrshah",
