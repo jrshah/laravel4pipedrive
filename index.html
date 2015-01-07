@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Laravel4pipedrive : Pipedrive Client API">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Laravel4pipedrive</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jrshah/laravel4pipedrive">View on GitHub</a>
+
+          <h1 id="project_title">Laravel4pipedrive</h1>
+          <h2 id="project_tagline">Pipedrive Client API</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jrshah/laravel4pipedrive/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jrshah/laravel4pipedrive/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="pipedrive-for-laravel-4" class="anchor" href="#pipedrive-for-laravel-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>PipeDrive for Laravel 4</h1>
+
+<p>Its client api to access data from pipedrive</p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Include laravel4pipedrive as a dependency in composer.json:</p>
+
+<pre><code>"jrshah/laravel4pipedrive": "0.*"
+</code></pre>
+
+<p>Run <code>composer install</code> to download the dependency.</p>
+
+<p>Add the ServiceProvider to your provider array within <code>app/config/app.php</code>:</p>
+
+<pre><code>'providers' =&gt; array(
+
+    'Jrshah\Laravel4pipedrive\Laravel4pipedriveServiceProvider'
+
+)
+</code></pre>
+
+<p>Finally, publish the configuration files via <code>php artisan config:publish jrshah/laravel4pipedrive</code>.</p>
+
+<h3>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h3>
+
+<p>Once you have published the configuration files, you can set your API Token, Url and Version in <code>app/config/packages/jrshah/laravel4pipedrive/config.php</code>:</p>
+
+<pre><code>&lt;?php
+return array(
+  'api_token' =&gt; 'your-pipedrive-token',
+  'api_url' =&gt; 'api-url-for-pipedrive',
+  'api_version' =&gt; 'pipedrive-api-version'
+);
+</code></pre>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<pre><code>
+// get all deals
+PipeDrive::request('GET','deals');
+
+// update a deal
+PipeDrive::request('PUT','deals',1,array('title'=&gt;'update the title'));
+
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Laravel4pipedrive maintained by <a href="https://github.com/jrshah">jrshah</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
